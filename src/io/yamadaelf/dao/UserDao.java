@@ -2,6 +2,7 @@ package io.yamadaelf.dao;
 
 import  io.yamadaelf.domain.User;
 import io.yamadaelf.util.JDBCUtils;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;;
 
@@ -16,8 +17,8 @@ private JdbcTemplate template=new JdbcTemplate(JDBCUtils.getDataSource());
                     loginUser.getUsername(), loginUser.getPassword());
 
             return user;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (EmptyResultDataAccessException e) {
+
             return null;
         }
     }
