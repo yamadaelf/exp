@@ -22,4 +22,11 @@ private JdbcTemplate template=new JdbcTemplate(JDBCUtils.getDataSource());
             return null;
         }
     }
+
+    public void register(User user) {
+
+        String sql = "insert into user values(null,?,?)";
+
+        template.update(sql, user.getUsername(), user.getPassword());
+    }
 }
