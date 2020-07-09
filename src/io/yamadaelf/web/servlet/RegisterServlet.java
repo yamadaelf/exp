@@ -21,12 +21,18 @@ public class RegisterServlet extends HttpServlet {
         User user = new User();
         try {
             BeanUtils.populate(user, map);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         UserDao dao=new UserDao();
         dao.register(user);
+        response.setContentType("text/html;charset=utf-8");
+        response.getWriter().write("注册成功！5秒钟后跳转到登录页面");
+        response.setHeader("refresh", "5;url=/elf/login.jsp");
+    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doPost(request, response);
     }
 }
+
+

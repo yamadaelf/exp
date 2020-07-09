@@ -17,9 +17,7 @@ public class SuccessServlet extends HttpServlet {
 
 
 
-            response.setContentType("text/html;charset=utf-8");
-
-            response.getWriter().write("登录成功！"+user.getUsername()+",欢迎您");
+            request.getRequestDispatcher("/link.html").forward(request,response);
         }
 
 
