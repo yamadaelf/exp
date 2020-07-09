@@ -1,31 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 山田伊尔芙
-  Date: 2020/7/7
-  Time: 12:00
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>register</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
-<h2>用户注册</h2>
-<form action="/RegisterServlet" method="post">
-    用户名：<input type="text" name="username">
-    密码：<input type="password" name="password">
-
-
-
-    <input type="submit"  value="保存">
+<div id="register">
+<h2>Register</h2>
+<form action="/elf/RegisterServlet" method="post">
+    用户名：<input type="text" required="required" name="username"><br/>
+    密码：<input type="password" required="required" name="password">
+    <button class="button" type="submit">保存</button>
 </form>
+    已有账号？去<a href="login.jsp">登录</a>
+    </div>
 </body>
-<script>
-    if(${status} == 0){
-        alert("注册成功")
-        location.href="/";
-    }
-</script>
+
 </html>
