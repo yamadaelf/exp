@@ -1,3 +1,26 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-image: url(/elf/resource/images/twintail.png);
+    background-size: cover;
+
+
+}
+.item-box {
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border: 3px solid #f5d68e;
+    padding: 25px;
+    -webkit-box-shadow: 0 5px 5px 0 #948d6e;
+    box-shadow: 0 5px 5px 0 #948d6e;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #181818;
+    background-image: url(/elf/resource/images/itembg.png);
+}
 
 .gacha-box {
     background-image: url(/elf/resource/images/gachabg.jpg);
@@ -8,7 +31,7 @@
     padding-top: 60px;
 }
 .gacha-content {
-    margin-top: 5%;
+
     width: 80%;
     margin: 0 auto;
     height: 305px;
@@ -28,18 +51,63 @@
     -ms-flex-wrap: wrap!important;
     flex-wrap: wrap!important;
 }
-.pic1{position: absolute;top:70px;left:450px;float:left;}
+.pic1{
+    position: absolute;
+    top:110px;
+    left:450px;
+    float:left;}
 .pic1 div,.pic2 div{float:left;}
-.pic2{position: absolute;top:268px;left:450px;float:left;}
-.pic1 img,.pic2 img,.pp3 img{width:110px;padding:0 10px;}
-
-.draw{
-    margin-left: 1220px;
-    margin-right: 200px;
-    width: 300px;
-    height: 80px;
+.pic2{position: absolute;
+    top:308px;
+    left:450px;
+    float:left;}
+.pic1 img,.pic2 img,.pp3 img{
+    width:110px;
+    padding:0 10px;}
+.gacha-info {
+    display: inline-block;
     font-size: 15px;
-    border-radius: 5px;
-
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.g-font {
+    font-size: 20px;
+    color: #007bff;
 }
 
+.pb-3, .py-3 {
+    padding-bottom: 1rem!important;
+}
+.pt-3, .py-3 {
+    padding-top: 1rem!important;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+.mt-4, .my-4 {
+    margin-top: 1.5rem!important;
+}
+
+.peco{
+    position:absolute;
+    left:900px;
+    top:500px;
+    width: 300px;
+    height: 150px;
+    background: url("/elf/resource/images/peco.gif") no-repeat;
+}
+.u1{
+    position:absolute;
+    left:400px;
+    top:500px;
+    width: 300px;
+    height: 150px;
+    background: url("/elf/resource/images/u1.gif") no-repeat;
+}
