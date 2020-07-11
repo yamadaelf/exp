@@ -22,9 +22,26 @@ private JdbcTemplate template=new JdbcTemplate(JDBCUtils.getDataSource());
             return null;
         }
     }
+    public User findByUsername(String username) {
+        User user = null;
+        try {
+            String sql = "select * from user where username = ?";
+            user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username);
+        } catch (Exception e) {
 
-    public void register(User user) {
+        }
 
+        return user;
+    }
+
+    public boolean register(User user) {
+        User u = findByUsername(user.getUsername());
+        if (u != null) {
+            return false;
+        }
+        else {return true;}
+    }
+    public void save(User user) {
         String sql = "insert into user values(null,?,?)";
 
         template.update(sql, user.getUsername(), user.getPassword());
