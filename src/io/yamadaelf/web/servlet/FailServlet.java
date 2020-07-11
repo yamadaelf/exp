@@ -13,7 +13,7 @@ public class FailServlet extends HttpServlet {
 
         response.setContentType("text/html;charset=utf-8");
 
-        response.getWriter().write("登录失败，用户名或密码错误！");
+        response.getWriter().write("登录失败！用户名或密码错误！");
         response.getWriter().write("5秒钟后跳转到登录页面......");
         response.setHeader("refresh", "5;url=/elf/login.jsp");
 
