@@ -15,7 +15,7 @@ public class SuccessServlet extends HttpServlet {
 
         if(user != null){
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("登录成功！5秒钟后跳转到抽卡页面");
+            response.getWriter().write("登录成功！5秒钟后跳转到抽卡页面......");
 
 
             response.setHeader("refresh", "5;url=/elf/draw.jsp");
