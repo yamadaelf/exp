@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 <head>
 <title>素敵な仲間が増えますよ!</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<script type="text/javascript" src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.25,maximum-scale=1.5,minimum-scale=1.0,user-scalable=no">
+<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="draw.css">
 	<script type="text/javascript" src="draw.js"></script>
 </head>
@@ -34,13 +34,14 @@
 
 	</div>
 	</div>
-<img style="position:absolute; left:1150px;top:550px; " onclick="draw()" src="images/draw10.png"/>
+<img style="position:absolute; left:85%;top:80%;float:left; " onclick="draw()" src="images/draw10.png"/>
 
 </div>
 
 <div class="item-box">
 	<div class="peco"></div>
 	<div class="u1"></div>
+	<div class="hatsune"></div>
 	<div style="color:red">
 		数据统计：
 	</div>

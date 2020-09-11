@@ -1,8 +1,8 @@
 body {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    margin: 0 auto;
     background-image: url(/elf/resource/images/twintail.png);
     background-size: cover;
 
@@ -21,7 +21,13 @@ body {
     color: #181818;
     background-image: url(/elf/resource/images/itembg.png);
 }
-
+@media only screen and (max-width: 1000px)
+    .gacha-box {
+        width: 100%;
+        height: auto;
+        padding-bottom: 60px;
+        background: url(/static/images/gachabg.jpg) 50%;
+    }
 .gacha-box {
     background-image: url(/elf/resource/images/gachabg.jpg);
     background-size: cover;
@@ -30,6 +36,13 @@ body {
     margin: 20px auto 0 auto;
     padding-top: 60px;
 }
+    @media only screen and (max-width: 1000px)
+        .gacha-box .gacha-content {
+            height: auto;
+            margin-top: 0;
+            padding-top: 10px;
+            min-height: 110px;
+        }
 .gacha-content {
 
     width: 80%;
@@ -55,15 +68,19 @@ body {
     position: absolute;
     top:110px;
     left:450px;
+    vertical-align: middle;
     float:left;}
 .pic1 div,.pic2 div{float:left;}
 .pic2{position: absolute;
     top:308px;
     left:450px;
+    vertical-align: middle;
     float:left;}
 .pic1 img,.pic2 img,.pp3 img{
     width:110px;
-    padding:0 10px;}
+    padding:0 10px;
+    vertical-align: middle;
+    }
 .gacha-info {
     display: inline-block;
     font-size: 15px;
@@ -97,17 +114,27 @@ body {
 
 .peco{
     position:absolute;
-    left:900px;
-    top:500px;
+    left:65%;
+    top:65%;
     width: 300px;
     height: 150px;
+    float:left;
     background: url("/elf/resource/images/peco.gif") no-repeat;
 }
 .u1{
     position:absolute;
-    left:400px;
-    top:500px;
+    left:25%;
+    top:65%;
     width: 300px;
     height: 150px;
+    float:left;
     background: url("/elf/resource/images/u1.gif") no-repeat;
-}
+}  .hatsune{
+       position:absolute;
+       left:45%;
+       top:65%;
+       width: 300px;
+       height: 150px;
+       float:left;
+       background: url("/elf/resource/images/hatsune.gif") no-repeat;
+   }
